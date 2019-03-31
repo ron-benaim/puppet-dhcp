@@ -37,7 +37,7 @@ class dhcp (
   Hash[String, Hash] $hosts = {},
   Variant[Array[String], Optional[String]] $includes = undef,
   String $config_comment = 'dhcpd.conf',
-  String $service_ensure = running,
+  Optional[String] $service_ensure = undef,
 ) inherits dhcp::params {
 
   # In case people set interface instead of interfaces work around
